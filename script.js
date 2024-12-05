@@ -1,5 +1,4 @@
 //Função para obter o número aleatório de IDs entre 1 e 1010
-
 const getRandomPokemonId = () => Math.floor(Math.random() * 1010 +1);
 
 //Função para buscar dados de um Pokemon por ID
@@ -7,7 +6,7 @@ const fetchPokemonData = (id) =>
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then((response) => response.ok ? response.json() : Promise.reject(`Erro ${response.status} : ${response.statusText}`))
 
-//função Principal para carregar 9 Pokemons aleatórios
+//função Principal para carregar 8 Pokemons aleatórios
 const loadRandomPokemons = async () => {
     const lista = document.getElementById('listaPokemons')
     lista.innerHTML = ""//Limpa a lista antes de carregar novos Pokemons
