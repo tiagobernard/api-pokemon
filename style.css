@@ -1,0 +1,77 @@
+body {
+    padding:0;
+    margin:0;
+    background-color: #FFCC00!important;
+    height: 100vh;
+}
+.containers {
+    margin:0;
+    padding: 50px 0;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {text-align: center;}
+
+.container h2 {color:#fff}
+
+#listaPokemons {
+    width: 1140px;
+}
+
+#listaPokemons ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+
+#listaPokemons li {
+    width: 24%;
+    height: 350px;
+    align-content: center;
+    text-align: center;
+    margin: 5px;
+    background: #1a4d7a;
+    list-style: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px #000;
+    animation: card 1s;
+    transform: scale(1);
+}
+
+#listaPokemons ul li:hover {
+    transition: ease-in-out 300ms ;
+    transform: scale(1.04);
+    z-index: 900;
+    background-color:#0075BE;
+    box-shadow: 2px 2px 5px #000;
+}
+
+@media only screen and (max-width:731px) {
+
+    .container {
+        align-content: start;
+        height: 100%;
+    }
+
+    #listaPokemons {
+        width: 100%;
+    }
+    #listaPokemons li {
+        width: 100%;
+    }
+}
+
+@keyframes card {
+    0% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
